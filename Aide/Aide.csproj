@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{042A8DB0-495F-4388-A101-41E292C08A1D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aide</RootNamespace>
+    <AssemblyName>Aide</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aibe">
+      <HintPath>..\..\..\Common\Aibe\Aibe\bin\Release\Aibe.dll</HintPath>
+    </Reference>
+    <Reference Include="Extension.Cryptography">
+      <HintPath>..\..\..\..\VS2015\Desktop\DLL\Extension\Cryptography\bin\Release\Extension.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Extension.Database.SqlServer">
+      <HintPath>..\..\..\..\VS2015\Desktop\DLL\Extension\Database.SqlServer\bin\Release\Extension.Database.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Extension.Extractor, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\VS2015\Desktop\DLL\Extension\Extractor\bin\Release\Extension.Extractor.dll</HintPath>
+    </Reference>
+    <Reference Include="Extension.Models">
+      <HintPath>..\..\..\..\VS2015\Desktop\DLL\Extension\Models\bin\Release\Extension.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="Extension.String">
+      <HintPath>..\..\..\..\VS2015\Desktop\DLL\Extension\String\bin\Release\Extension.String.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionFilters\CommonActionFilter.cs" />
+    <Compile Include="Extensions\ActionInfoExtension.cs" />
+    <Compile Include="Helpers\AideUserHelper.cs" />
+    <Compile Include="Logics\TeamLogic.cs" />
+    <Compile Include="Models\Accounts\Identity.cs" />
+    <Compile Include="Customs\Actions.cs" />
+    <Compile Include="Localization.cs" />
+    <Compile Include="Logics\AccountLogic.cs" />
+    <Compile Include="Logics\RoleLogic.cs" />
+    <Compile Include="Logics\UserLogic.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Accounts\IdentityModels.cs" />
+    <Compile Include="Models\AideCreateEditGroupModel.cs" />
+    <Compile Include="Models\AideFilterGroupDetailsModel.cs" />
+    <Compile Include="Models\AideBaseFilterIndexModel.cs" />
+    <Compile Include="Models\Filters\ApplicationUserFilter.cs" />
+    <Compile Include="Models\Users\AideUserFilterIndexModel.cs" />
+    <Compile Include="ParameterHolder.cs" />
+    <Compile Include="DataHolder.cs" />
+    <Compile Include="ExternalSources\MessageBoxManager.cs" />
+    <Compile Include="Helpers\AideFileHelper.cs" />
+    <Compile Include="Helpers\AideTableHelper.cs" />
+    <Compile Include="Logics\CommonLogic.cs" />
+    <Compile Include="Logics\MetaLogic.cs" />
+    <Compile Include="Models\AideBaseTableModel.cs" />
+    <Compile Include="Models\AideCreateEditModel.cs" />
+    <Compile Include="Models\AideDetailsModel.cs" />
+    <Compile Include="Models\AideFilterIndexModel.cs" />
+    <Compile Include="Models\AideRequestModel.cs" />
+    <Compile Include="Models\ItemPanels\ComboBoxModel.cs" />
+    <Compile Include="Models\Results\MetaResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Users\UserAuthenticationType.cs" />
+    <Compile Include="Winforms\Helpers\FormHelper.cs" />
+    <Compile Include="Winforms\Helpers\FunctionHelper.cs" />
+    <Compile Include="Winforms\Views\Common\CommonCreateEditGroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\Views\Common\CommonCreateEditGroupForm.Designer.cs">
+      <DependentUpon>CommonCreateEditGroupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\Views\Common\CommonGroupDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\Views\Common\CommonGroupDetailsForm.Designer.cs">
+      <DependentUpon>CommonGroupDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\Views\Manage\ManageChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\Views\Manage\ManageChangePasswordForm.Designer.cs">
+      <DependentUpon>ManageChangePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\Views\Manage\ManageSetPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\Views\Manage\ManageSetPasswordForm.Designer.cs">
+      <DependentUpon>ManageSetPasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\Views\Manage\ManageIndexForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\Views\Manage\ManageIndexForm.Designer.cs">
+      <DependentUpon>ManageIndexForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\Views\Manage\ManageDisplayNameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\Views\Manage\ManageDisplayNameForm.Designer.cs">
+      <DependentUpon>ManageDisplayNameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\Views\User\UserFilterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\Views\User\UserFilterForm.Designer.cs">
+      <DependentUpon>UserFilterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\Views\User\UserDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\Views\User\UserDetailsForm.Designer.cs">
+      <DependentUpon>UserDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\Views\User\UserCreateEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\Views\User\UserCreateEditForm.Designer.cs">
+      <DependentUpon>UserCreateEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\Views\User\UserIndexForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\Views\User\UserIndexForm.Designer.cs">
+      <DependentUpon>UserIndexForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\Views\Team\TeamDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\Views\Team\TeamDetailsForm.Designer.cs">
+      <DependentUpon>TeamDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\Views\Team\TeamCreateEditFilterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\Views\Team\TeamCreateEditFilterForm.Designer.cs">
+      <DependentUpon>TeamCreateEditFilterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\Views\Role\RoleDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\Views\Role\RoleDetailsForm.Designer.cs">
+      <DependentUpon>RoleDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\Views\Role\RoleCreateEditFilterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\Views\Role\RoleCreateEditFilterForm.Designer.cs">
+      <DependentUpon>RoleCreateEditFilterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\Models\UncommonButtonTag.cs" />
+    <Compile Include="Winforms\Views\Team\TeamIndexForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\Views\Team\TeamIndexForm.Designer.cs">
+      <DependentUpon>TeamIndexForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\Views\Role\RoleIndexForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\Views\Role\RoleIndexForm.Designer.cs">
+      <DependentUpon>RoleIndexForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\Views\Admin\AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\Views\Admin\AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\Views\Common\CommonCreateEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\Views\Common\CommonCreateEditForm.Designer.cs">
+      <DependentUpon>CommonCreateEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\Views\Common\CommonDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\Views\Common\CommonDetailsForm.Designer.cs">
+      <DependentUpon>CommonDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\Views\Common\CommonFilterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\Views\Common\CommonFilterForm.Designer.cs">
+      <DependentUpon>CommonFilterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\Views\Common\CommonIndexForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\Views\Common\CommonIndexForm.Designer.cs">
+      <DependentUpon>CommonIndexForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\Components\DecimalAwareNumericUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Winforms\Components\SingleItemPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Winforms\Components\SingleItemPanel.Designer.cs">
+      <DependentUpon>SingleItemPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\Extensions\ListColumnInfoExtension.cs" />
+    <Compile Include="Winforms\Extensions\ScTableInfoExtension.cs" />
+    <Compile Include="Winforms\Helpers\FileHelper.cs" />
+    <Compile Include="Winforms\Helpers\MetaHelper.cs" />
+    <Compile Include="Winforms\Helpers\UiHelper.cs" />
+    <Compile Include="Winforms\Initializer.cs" />
+    <Compile Include="Winforms\Views\Account\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\Views\Account\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\Models\ButtonTag.cs" />
+    <Compile Include="Winforms\Models\ComboBoxTag.cs" />
+    <Compile Include="Winforms\Models\DgvButtonTag.cs" />
+    <Compile Include="Winforms\Models\SingleItemPanelModel.cs" />
+    <Compile Include="Winforms\SizeHolder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Winforms\Views\Common\CommonCreateEditGroupForm.resx">
+      <DependentUpon>CommonCreateEditGroupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\Views\Common\CommonGroupDetailsForm.resx">
+      <DependentUpon>CommonGroupDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\Views\Manage\ManageChangePasswordForm.resx">
+      <DependentUpon>ManageChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\Views\Manage\ManageSetPasswordForm.resx">
+      <DependentUpon>ManageSetPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\Views\Manage\ManageIndexForm.resx">
+      <DependentUpon>ManageIndexForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\Views\Manage\ManageDisplayNameForm.resx">
+      <DependentUpon>ManageDisplayNameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\Views\User\UserFilterForm.resx">
+      <DependentUpon>UserFilterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\Views\User\UserDetailsForm.resx">
+      <DependentUpon>UserDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\Views\User\UserCreateEditForm.resx">
+      <DependentUpon>UserCreateEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\Views\User\UserIndexForm.resx">
+      <DependentUpon>UserIndexForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\Views\Team\TeamDetailsForm.resx">
+      <DependentUpon>TeamDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\Views\Team\TeamCreateEditFilterForm.resx">
+      <DependentUpon>TeamCreateEditFilterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\Views\Role\RoleDetailsForm.resx">
+      <DependentUpon>RoleDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\Views\Role\RoleCreateEditFilterForm.resx">
+      <DependentUpon>RoleCreateEditFilterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\Views\Team\TeamIndexForm.resx">
+      <DependentUpon>TeamIndexForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\Views\Role\RoleIndexForm.resx">
+      <DependentUpon>RoleIndexForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\Views\Admin\AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\Views\Common\CommonCreateEditForm.resx">
+      <DependentUpon>CommonCreateEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\Views\Common\CommonDetailsForm.resx">
+      <DependentUpon>CommonDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\Views\Common\CommonFilterForm.resx">
+      <DependentUpon>CommonFilterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\Views\Common\CommonIndexForm.resx">
+      <DependentUpon>CommonIndexForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\Components\SingleItemPanel.resx">
+      <DependentUpon>SingleItemPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\Views\Account\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
