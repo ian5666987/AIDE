@@ -1,4 +1,6 @@
-ASTrio In-house-built Desktop Engine (AIDE) is a desktop GUI project based on AIBE (https://github.com/ian5666987/AIBE) and is created solely by me (though it contains a company name: ASTrio).
+ASTrio In-house-built Desktop Engine (AIDE) is a desktop GUI project created by me based on previously created AIBE (https://github.com/ian5666987/AIBE). See my AIBE project repository for more information.
+
+To use it:
 
 *) Please change the "DHObscured" class name to "DH" to be able to compile the project.
 *) See my AIBE project repository for more information.
